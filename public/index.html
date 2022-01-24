@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<!-- This styles in document are for try minimize the CLS, but I dont work hard in it at this time -->
+	<style>
+		* {
+			color: #000;
+			font: normal 16px "Montreal";
+			text-decoration: none;
+			z-index: 0;
+			padding: 0;
+			margin: 0;
+			outline: none;
+			border: none;
+			box-sizing: border-box;
+			overflow-x: hidden;
+			background-color: transparent;
+		}
+		div#paper {
+			border: 20px solid #222;
+			border-radius: 5px;
+			margin: 50px auto;
+			background-color: #fff;
+			max-width: 1080px;
+			padding: 50px;
+		}
+		header > h1 {
+			font: normal 34px "Stolzl";
+		}
+
+	</style>
+	<link rel="stylesheet" href="stylesheets/fonts.css" media="none">
+	<link rel="stylesheet" href="stylesheets/style.css" media="none">
+</head>
+<body>
+	<div id="paper">
+		<header class="justify-between">
+			<h1>
+				fang.ms
+			</h1>
+			<nav>
+				<input type="checkbox" id="show-menu">
+				<label for="show-menu">
+					<img src="../img/menu.webp" alt="...">
+				</label>
+				<ul id="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">About</a></li>
+					<li><a href="#">Shop</a></li>
+					<li><a href="#">The Store</a></li>
+					<li><a href="#">Made to order</a></li>
+					<li><a href="#">Journal</a></li>
+				</ul>
+			</nav>
+		</header>
+		<section id="banner">
+			<div id="img-banner-container">
+				<img src="img/banner.webp" alt="Banner">
+			</div>
+			<div id="season-info-container">
+				<a href="#">
+					<div id="left-info">
+						<img src="img/layer-icon.webp" alt="Layer icon">
+						<h3>3-roll-2</h3>
+						<p>Button fastening</p>
+					</div>
+				</a>
+				<a href="#">
+					<div id="right-info">
+						<img src="img/brand-icon.webp" alt="Brand icon">
+						<h3>Double vent</h3>
+						<p></p>
+					</div>
+				</a>
+			</div>
+		</section>
+		<main>
+			<h4>
+				What we Have
+				<svg viewBox="0 0 125 18">
+					<text x="2" y="16">What we Have</text>
+				</svg>
+			</h4>
+			<div class="card">
+				<div class="card-info-container">
+					<h5>New Arrivals</h5>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, eum ex, itaque quod nesciunt animi quisquam.
+					</p>
+					<a>
+						<button>Check</button>
+					</a>
+				</div>
+				<img src="img/t-shirt.webp" alt="T-shirt">
+			</div>
+			<div class="card">
+				<div class="card-info-container">
+					<h5>Add-on services</h5>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, eum ex, itaque quod nesciunt animi quisquam.
+					</p>
+					<a>
+						<button>Check</button>
+					</a>
+				</div>
+				<img src="img/shoes.webp" alt="Shoes">
+			</div>
+			<div class="card">
+				<div class="card-info-container">
+					<h5>Add-on services</h5>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, eum ex, itaque quod nesciunt animi quisquam.
+					</p>
+					<a>
+						<button>Check</button>
+					</a>
+				</div>
+				<img src="img/shoes.webp" alt="Shoes">
+			</div>
+
+		</main>
+		<footer>
+			<p>
+				<em>Email:</em> ryanlimati@prontomail.com
+			</p>
+			<p>
+				Front-end inpired (and partial implemented) by: <a href="https://dribbble.com/shots/17331524/">Sajon</a>
+			</p>
+		</footer>
+	</div>
+
+	<script type="text/javascript">
+		window.onload = (event) => {
+			let links = document.querySelectorAll('link');
+			links.forEach(element => element.media='all');
+		};
+	</script>
+
+</body>
+</html>

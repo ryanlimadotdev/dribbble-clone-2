@@ -1,0 +1,301 @@
+div#paper {
+	background: rgb(255,255,255);
+	background: linear-gradient(180deg, rgba(255,255,255,1) 0%, rgba(248,242,237,1) 40%);
+}
+header {
+	display: flex;
+	justify-content: space-between;
+
+	h1 {
+	}
+	nav {
+		input#show-menu,
+		label {
+			display: none;
+		}
+
+		ul#menu {
+			li {
+				display: inline-block;
+				a {
+					display: inherit;
+					padding: 10px 20px;
+					transition: transform .1s linear 0s;
+
+					&:hover {
+						font-weight: bold;
+						transform: scale(1.15);
+					}
+				}
+			}
+		}
+	}
+}
+section#banner {
+	position: relative;
+	margin-bottom: 50px;
+
+	div#img-banner-container {
+		padding: 40px;
+
+		img {
+			width: 100%;
+			height: auto;
+		}
+	}
+
+	div#season-info-container {
+		width: 100%;
+		position: absolute;
+		bottom: 20%;
+		font-family: "Stolzl";
+		text-align: center;
+
+		* {
+			font-family: inherit;
+		}
+
+		a {
+
+			div {
+				p {
+					font-family: "Montreal";
+					font-size: 14px;
+				}
+			}
+
+			#left-info {
+				float: left;
+			}
+			#right-info {
+				float: right;
+			}
+		}
+	}
+}
+main {
+	h4 {
+		font: normal 54px "Stolzl";
+		display: inline-block;
+		padding: 50px 0;
+
+		svg {
+			display: none;
+		}
+	}
+	div.card {
+		vertical-align: top;
+		display: inline-block;
+		max-width: 49%;
+
+		img {
+			width: 50%;
+			height: auto;
+			display: inline-block;
+
+		}
+
+		div.card-info-container {
+			padding: 40px 10px;
+			max-width: 49%;
+			vertical-align: top;
+			display: inline-block;
+
+			h5 {
+				font:normal 20px "Stolzl";
+				color: #f50000;
+
+			}
+
+			a {
+
+				button {
+					cursor: pointer;
+					border: none;
+					float: left;
+					margin: 20px 0;
+					border-radius: 2px;
+					padding: 10px 20px;
+					font-size: 16px;
+					text-transform: uppercase;
+					color: white;
+					background-color: #38C74B;
+					box-shadow: 0 0 4px #999;
+					outline: none;
+					background-position: center;
+					transition: background 0.4s linear 0s;
+					-webkit-tap-highlight-color:  transparent; 
+
+
+					&:hover {
+						background: #51C744 radial-gradient(circle, transparent 1%, #51C744 1%) center/15000%;
+					}
+					&:active {
+						background-color: #92E089;
+						background-size: 100%;
+						transition: background 0s;
+					}
+				}
+
+			}
+		}
+	}
+}
+footer {
+	border-bottom: 1px solid #222;
+	border-radius: 10px;
+	margin-top: 80px;
+	padding: 20px;
+	text-align: center;
+
+	p {
+		margin-bottom: 10px;
+		em {
+			font: bold 1em "Stolzl";
+			margin-right: 10px;
+		}
+		a {
+			text-decoration: underline;
+		}
+	}
+}
+@media (max-width: 520px) {
+	body {
+		background-color: #222;
+	}
+	div#paper {
+		border: 5px solid #000;
+		margin-top: 10px;
+		padding: 0;
+	}
+
+	header {
+		display: inline-block;
+		padding: 50px;
+
+		nav {
+			label {
+				z-index: 2;
+				display: inline-block;
+				width: 50px;
+				height: 50px;
+				direction: rtl;
+				cursor: pointer;
+				padding: 7px;
+				position: absolute;
+				border-radius: 50%;
+				top: 30px;
+				right: 20px;
+				overflow: hidden;
+				background-position: center;
+				transition: background 0.8s;
+				-webkit-tap-highlight-color:  transparent; 
+
+				&:active {
+					background-color: #f8f2ed;
+					background-size: 100%;
+					transition: background 0s;
+				}
+				
+				img {
+					width: 100%;
+					height: auto;
+				}
+			}
+			ul#menu {
+				z-index: 1;
+				display: inline-block;
+				position: absolute;
+				top: -100vh;
+				left: 0;
+				height: 100vh;
+				width: 100vw;
+				padding: 100px 0;
+				background-color: rgba(0, 0, 0, .9);
+				transition: top .125s linear 0s;
+
+				li {
+					text-align: center;
+					display: block;
+					width: 100%;
+					a {
+						width: 100%;
+						font-size: 22px;
+						color: #fff;
+						-webkit-tap-highlight-color:  transparent; 
+					}
+				}
+			}
+			input#show-menu:checked ~ label {
+				img {
+					transition: filter .8s;
+					filter: invert(100%);
+				}
+			}
+
+			input#show-menu:checked ~ ul#menu {
+				top: 0;
+			}
+		}
+	}
+	section#banner {
+
+		div#img-banner-container {
+			padding: 10px;
+		}
+
+		div#season-info-container {
+			position: relative;
+			padding: 0 50px;
+			a {
+				div {
+
+				}
+			}
+		}
+	}
+	main {
+		h4 {
+			font-size: 0;
+			display: inline-block;
+			width: 100%;
+
+			svg {
+				display: inline-block;
+				width: 100%;
+
+				text {
+					font-size: 16px;
+					text-align: center;
+					font-family: "Stolzl";
+				}
+			}
+		}
+
+		div.card {
+			max-width: 100%;
+			padding: 20px;
+
+			img {
+				width: 100%;
+			}
+
+			div.card-info-container {
+				max-width: 100%;
+
+				a {
+					button {
+						float: right;
+						margin: 20px;
+
+					}
+				}
+
+			}
+		}
+	}
+	footer {
+		margin: 20px 0 10px;
+		border: none;
+	}
+}

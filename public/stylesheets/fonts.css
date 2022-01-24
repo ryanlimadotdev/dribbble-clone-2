@@ -1,0 +1,12 @@
+@font-face {
+	font-family: "Montreal";
+	src: url("../fonts/Montreal/Montreal-Regular.woff2"),
+		url("../fonts/Montreal/Montreal-Regular.woff");
+   font-display: swap;
+}
+@font-face {
+	font-family: "Stolzl";
+	src: url("../fonts/Stolzl Display/StolzlDisplay-Regular.woff2"),
+		url("../fonts/Stolzl Display/StolzlDisplay-Regular.woff2");
+   font-display: swap;
+}
